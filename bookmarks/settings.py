@@ -31,15 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # custom
+    'account.apps.AccountConfig',
+
+    # original
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # custom
-    'account.apps.AccountConfig',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# this tells django which URL to redirect the user to after successful login
+LOGIN_REDIRECT_URL = 'dashboard'
+# the URL to redirect the user to log in
+LOGIN_URL = 'login'
+# logout
+LOGOUT_URL = 'logout'
