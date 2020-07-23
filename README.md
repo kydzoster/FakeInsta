@@ -17,3 +17,10 @@
 ##### Authentication
 
 - python manage.py createsuperuser
+
+##### User Models
+
+- pip3 install Pillow
+- python manage.py makemigrations
+- python manage.py migrate
+- 

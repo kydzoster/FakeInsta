@@ -132,3 +132,8 @@ LOGOUT_URL = 'logout'
 
 # will write emails to the standard output(in console) instead of sending them through an SMTP server
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Media handlers, this will handle images uploaded by the user
+MEDIA_URL = '/media/'
+# images will live here
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
