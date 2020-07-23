@@ -129,3 +129,6 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 # logout
 LOGOUT_URL = 'logout'
+
+# will write emails to the standard output(in console) instead of sending them through an SMTP server
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
