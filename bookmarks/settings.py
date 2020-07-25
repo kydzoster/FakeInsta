@@ -140,7 +140,24 @@ MEDIA_URL = '/media/'
 # images will live here
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+# social authentications in order (username, email, facebook, twitter, google)
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
 ]
+
+# Facebook auth app
+SOCIAL_AUTH_FACEBOOK_KEY = '307824570409094'
+SOCIAL_AUTH_FACEBOOK_SECRET = '3b995aa951b6f9688806030466f77952'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+# Twitter auth app
+SOCIAL_AUTH_TWITTER_KEY = '' # Twitter API Key
+SOCIAL_AUTH_TWITTER_SECRET = '' # Twitter API Secret
+
+# Google auth app
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '763178940526-19sb7flva3b4bfnc0cjdh61v82g4aij0.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'DJwGOCQ_m_owODMrni3lmyIj'
