@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # login view
     path('account/', include('account.urls')),
+    # social authentication
+    path('social-auth/', include('social_django.urls', namespace='social')),
 ]
 
 # django development server is in charge of the media, do not use static() for production 

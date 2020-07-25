@@ -23,4 +23,9 @@
 - pip3 install Pillow
 - python manage.py makemigrations
 - python manage.py migrate
+
+##### Social Authentication
+
+- pip3 install social-auth-app-django
+- python manage.py migrate
 - 
