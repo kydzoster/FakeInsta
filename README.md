@@ -28,4 +28,11 @@
 
 - pip3 install social-auth-app-django
 - python manage.py migrate
-- 
+
+This will allow development server to run through HTTPS by using RunServerPlus which is django extension. To run it, you'll have to add https:// before the domain name
+
+        - pip3 install django-extensions
+        - pip3 install werkzeug
+        - pip3 install pyOpenSSL
+
+- python manage.py runserver_plus --cert-file cert.crt

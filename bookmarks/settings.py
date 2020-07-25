@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # custom
     'account.apps.AccountConfig',
     'social_django', # social authentication
+    'django_extensions', # for RunServerPlus
 
     # original
     'django.contrib.admin',
